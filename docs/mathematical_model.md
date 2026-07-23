@@ -84,11 +84,10 @@ Additional droplet properties include
 The trajectory is stored as
 
 ```
-Trajectory =
-[(x0,y0),
-(x1,y1),
-...
-(xn,yn)]
+Trajectory = [(x0,y0), 
+	      (x1,y1),
+	      ... 
+	      (xn,yn)]
 ```
 
 ---
@@ -127,13 +126,7 @@ Future versions will support
 A routing path is defined as
 
 ```
-P =
-{
-D0,
-D1,
-...
-Dn
-}
+P = {D_0, D_1, ... D_n}
 ```
 
 where
@@ -175,9 +168,7 @@ P
 the routing cost is
 
 ```
-Cost(P)
-=
-Σ MoveCost
+Cost(P) = Σ MoveCost
 ```
 
 Currently,
@@ -214,9 +205,7 @@ One droplet movement corresponds to one simulation step.
 In the current implementation
 
 ```
-Energy
-=
-Number of Successful Moves
+Energy = Number of Successful Moves
 ```
 
 Future versions will incorporate
@@ -233,13 +222,7 @@ Future versions will incorporate
 The routing algorithm seeks to minimize
 
 ```
-f(P)
-=
-Path Length
-+
-Execution Time
-+
-Energy Consumption
+f(P) = Path Length + Execution Time + Energy Consumption
 ```
 
 subject to
