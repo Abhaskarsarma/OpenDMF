@@ -157,11 +157,7 @@ is the destination.
 OpenDMF currently uses Manhattan distance as the heuristic for A* routing.
 
 ```
-h(n)
-=
-|xgoal−x|
-+
-|ygoal−y|
+h(n) = |xgoal−x| + |ygoal−y|
 ```
 
 This heuristic is admissible for four-directional movement.
