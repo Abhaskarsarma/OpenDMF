@@ -1,5 +1,6 @@
 from experiments.config import ExperimentConfig
 from experiments.experiment import Experiment
+from visualization.console_renderer import ConsoleRenderer
 
 def display_snapshot(snapshot):
 
@@ -50,6 +51,12 @@ config = ExperimentConfig(
 experiment = Experiment(config)
 
 result = experiment.run()
+
+renderer = ConsoleRenderer(delay=0.2)
+
+renderer.render(experiment.simulation.history)
+
+renderer.show_summary(result)
 
 snapshot = experiment.simulation.snapshot()
 
